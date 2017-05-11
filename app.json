@@ -1,0 +1,32 @@
+{
+  "name": "Facebook-Bot",
+  "scripts": {
+  },
+  "env": {
+    "ChannelAccessToken": {
+      "required": true
+    },
+    "ChannelSecret": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/kr/Line-Bot.git"
+    },
+    {
+      "url": "heroku/go"
+    },
+    {
+      "url": "https://github.com/kr/Line-Bot.git"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
