@@ -4,7 +4,7 @@ import request from 'request';
 import config from '../config';
 
 const app = express();
-const port = 443/*'7123'*/;
+const port = '7123';
 const VERIFY_TOKEN = config.VERIFY_TOKEN;
 const PAGE_TOKEN = config.PAGE_TOKEN;
 
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/webhook/', (req, res) => {
-  if (req.query['hub.verify_token'] === '123'/*VERIFY_TOKEN*/) {
+  if (req.query['hub.verify_token'] === VERIFY_TOKEN) {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token');
