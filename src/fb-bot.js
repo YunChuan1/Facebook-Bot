@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/webhook/', (req, res) => {
-  if (req.query['hub.verify_token'] === VERIFY_TOKEN) {
+  if (req.query['hub.verify_token'] === 123/*VERIFY_TOKEN*/) {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token');
