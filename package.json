@@ -2,6 +2,7 @@
   "name": "Facebook-Bot",
   "version": "1.0.0",
   "description": "",
+  "repository": "https://github.com/YunChuan1/Facebook-Bot",
   "author": "Li-Hu (http://huli.logdown.com)",
   "license": "MIT",
   "dependencies": {
